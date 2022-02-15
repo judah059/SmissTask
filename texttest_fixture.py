@@ -3,11 +3,12 @@ from gilded_rose import *
 
 if __name__ == "__main__":
     itemss = [
-             Item(name="+5 Dexterity Vest", sell_in=10, quality=20),
-             Item(name="Aged Brie", sell_in=2, quality=10),
-             Item(name="Elixir of the Mongoose", sell_in=5, quality=7),
-             Item(name="Backstage passes", sell_in=10, quality=40),
-             Item(name="Conjured", sell_in=3, quality=5),  # <-- :O
+             CustomItem("+5 Dexterity Vest", 10, 20, True),
+             CustomItem("Aged Brie", 2, 10, True),
+             CustomItem("Elixir of the Mongoose", 5, 3),
+             CustomItem("Backstage passes", 0, 40),
+             CustomItem("Conjured", 3, 5),  # <-- :O
+             CustomItem("Sulfuras", 10, 80)
             ]
     gr = GildedRose(itemss)
     gr.update_quality()
